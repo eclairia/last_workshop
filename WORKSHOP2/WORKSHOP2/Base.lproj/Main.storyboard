@@ -98,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="1264.8" y="353.9730134932534"/>
         </scene>
-        <!--Team-->
+        <!--Equipe-->
         <scene sceneID="Ef0-vd-iAa">
             <objects>
                 <viewController id="Gkt-RT-LvR" sceneMemberID="viewController">
@@ -108,13 +108,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="e8P-NV-yGS"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Team" id="tCO-c4-KJb"/>
+                    <tabBarItem key="tabBarItem" title="Equipe" image="team" id="tCO-c4-KJb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SVD-h7-z1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2900" y="1130"/>
         </scene>
-        <!--Perso-->
+        <!--Profil-->
         <scene sceneID="6lO-rc-qAb">
             <objects>
                 <viewController id="yXJ-tc-0cz" sceneMemberID="viewController">
@@ -124,7 +124,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="RcN-Z2-9Ib"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Perso" id="9aY-Mb-hgG"/>
+                    <tabBarItem key="tabBarItem" title="Profil" image="personal" id="9aY-Mb-hgG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUu-1I-TVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -226,6 +226,11 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Mes réservations"/>
                                             </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reservations" translatesAutoresizingMaskIntoConstraints="NO" id="Azg-Tt-oKZ">
+                                                <rect key="frame" x="16" y="24" width="37" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -249,13 +254,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.65332491526549075" green="0.66667121648788452" blue="0.66445449025489189" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwj-NP-yRt">
-                                <rect key="frame" x="289" y="242" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -766,8 +764,11 @@
         <image name="add" width="16" height="16"/>
         <image name="badge" width="16" height="16"/>
         <image name="loupe" width="16" height="16"/>
+        <image name="personal" width="24" height="24"/>
+        <image name="reservations" width="24" height="24"/>
         <image name="share" width="16" height="16"/>
         <image name="streaming" width="16" height="16"/>
+        <image name="team" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="raS-bw-k8i"/>
