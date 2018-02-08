@@ -399,6 +399,9 @@
                                 <rect key="frame" x="289" y="617" width="51" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Suivant"/>
+                                <connections>
+                                    <segue destination="KbM-4Y-Ci9" kind="show" id="1Hp-7x-UyQ"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AKj-Mt-Mma">
                                 <rect key="frame" x="48" y="194" width="49" height="31"/>
@@ -481,23 +484,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAu-Ci-ash">
-                                <rect key="frame" x="90" y="279" width="182" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Revenir à la page d'acceuil"/>
-                                <connections>
-                                    <action selector="onClickRedirectWebSite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EpQ-vN-acV"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="eys-K9-1Nx"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v49-RK-1Ad">
-                                <rect key="frame" x="114" y="339" width="134" height="30"/>
+                                <rect key="frame" x="114" y="426" width="134" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Aller sur le site web"/>
                                 <connections>
                                     <action selector="onClickRedirectWebSite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xCh-xW-aij"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAu-Ci-ash">
+                                <rect key="frame" x="135" y="366" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Se connecter"/>
+                                <connections>
+                                    <action selector="onClickRedirectWebSite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EpQ-vN-acV"/>
+                                    <segue destination="DiL-rK-w2B" kind="show" id="2pz-CY-gdd"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Dés que votre licence validée, vous recevrez un mail et un SMS vous informant de vos identifiants de connexion." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="R4L-76-voN">
+                                <rect key="frame" x="80" y="235" width="235" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tPO-3K-G5b"/>
@@ -527,6 +537,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eys-K9-1Nx"/>
+        <segue reference="2pz-CY-gdd"/>
     </inferredMetricsTieBreakers>
 </document>
