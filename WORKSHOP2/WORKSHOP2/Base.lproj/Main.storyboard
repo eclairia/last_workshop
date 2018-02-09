@@ -52,15 +52,15 @@
             </objects>
             <point key="canvasLocation" x="260" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Controller-->
         <scene sceneID="3IC-0C-WSF">
             <objects>
-                <viewController id="DiL-rK-w2B" sceneMemberID="viewController">
+                <viewController id="DiL-rK-w2B" customClass="LoginController" customModule="WORKSHOP2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ucX-wW-PwA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Identifiant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hw8-t8-Yhj">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hw8-t8-Yhj">
                                 <rect key="frame" x="120" y="241" width="135" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -86,6 +86,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Se connecter"/>
                                 <connections>
+                                    <action selector="loginButton:" destination="DiL-rK-w2B" eventType="touchUpInside" id="ebH-kF-KGD"/>
                                     <segue destination="cxd-5r-8jq" kind="show" id="wUV-6E-Ecs"/>
                                 </connections>
                             </button>
@@ -93,6 +94,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ikY-Nf-WOb"/>
                     </view>
+                    <connections>
+                        <outlet property="emailText" destination="hw8-t8-Yhj" id="VAr-bP-sW3"/>
+                        <outlet property="passwordText" destination="6Kq-Nd-i8Q" id="imN-fw-bXC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ot0-Mh-ZoQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,7 +122,7 @@
         <!--Home-->
         <scene sceneID="QtN-PU-QwB">
             <objects>
-                <viewController id="VHY-Ye-q5V" customClass="HomePageController" customModule="WORKSHOP2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VHY-Ye-q5V" customClass="HomePageController" customModule="WORKSHOP2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eRh-wT-yid">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -617,10 +622,10 @@
             </objects>
             <point key="canvasLocation" x="4295" y="-368"/>
         </scene>
-        <!--Inscription Form6 Controller-->
+        <!--View Controller-->
         <scene sceneID="BXm-Iz-Rsj">
             <objects>
-                <viewController id="5uN-xj-cDW" customClass="InscriptionForm6Controller" customModule="WORKSHOP2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5uN-xj-cDW" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rce-MG-IID">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -694,7 +699,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Envoyer ma demande de licence"/>
                                 <connections>
-                                    <action selector="sendEmailToValidLicence:" destination="5uN-xj-cDW" eventType="touchUpInside" id="CF0-g9-dbt"/>
                                     <segue destination="KbM-4Y-Ci9" kind="show" id="1Hp-7x-UyQ"/>
                                 </connections>
                             </button>
@@ -707,10 +711,10 @@
             </objects>
             <point key="canvasLocation" x="5028" y="-368"/>
         </scene>
-        <!--View Controller-->
+        <!--Inscription Form6 Controller-->
         <scene sceneID="JHN-y1-99I">
             <objects>
-                <viewController id="KbM-4Y-Ci9" sceneMemberID="viewController">
+                <viewController id="KbM-4Y-Ci9" customClass="InscriptionForm6Controller" customModule="WORKSHOP2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T4l-AG-3Zr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -729,21 +733,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v49-RK-1Ad">
-                                <rect key="frame" x="114" y="426" width="134" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oxe-n4-KHZ">
+                                <rect key="frame" x="55" y="397" width="265" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Aller sur le site web"/>
+                                <state key="normal" title="Faites découvrir à vos amis votre sport"/>
                                 <connections>
-                                    <action selector="onClickRedirectWebSite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xCh-xW-aij"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAu-Ci-ash">
-                                <rect key="frame" x="135" y="366" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Se connecter"/>
-                                <connections>
-                                    <action selector="onClickRedirectWebSite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EpQ-vN-acV"/>
-                                    <segue destination="DiL-rK-w2B" kind="show" id="2pz-CY-gdd"/>
+                                    <action selector="sendEmailToValidLicence:" destination="KbM-4Y-Ci9" eventType="touchUpInside" id="LZF-dy-OPo"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Dés que votre licence validée, vous recevrez un mail et un SMS vous informant de vos identifiants de connexion." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="R4L-76-voN">
@@ -753,6 +748,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v49-RK-1Ad">
+                                <rect key="frame" x="114" y="488" width="134" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Aller sur le site web"/>
+                                <connections>
+                                    <action selector="onClickRedirectWebSite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xCh-xW-aij"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAu-Ci-ash">
+                                <rect key="frame" x="134" y="428" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Se connecter"/>
+                                <connections>
+                                    <action selector="onClickRedirectWebSite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EpQ-vN-acV"/>
+                                    <segue destination="DiL-rK-w2B" kind="show" id="2pz-CY-gdd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tPO-3K-G5b"/>

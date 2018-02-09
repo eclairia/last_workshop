@@ -23,7 +23,6 @@ class InscriptionForm6Controller: UIViewController, MFMailComposeViewControllerD
     }
     
     
-    
     @IBAction func sendEmailToValidLicence(_ sender: Any) {
         let mail = configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
@@ -37,9 +36,8 @@ class InscriptionForm6Controller: UIViewController, MFMailComposeViewControllerD
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
         
-        mailComposerVC.setToRecipients(["celine.meme@eemi.com"])
-        mailComposerVC.setSubject("Sending you an in-app e-mail...")
-        mailComposerVC.setMessageBody("Sending e-mail in-app is not so bad!", isHTML: false)
+        mailComposerVC.setSubject("Viens essayer le hado")
+        mailComposerVC.setMessageBody("A l’aide d’un casque et d’un bracelet connecté, vous découvrirez une nouvelle dimension. Grâce à cet équipement, vous pouvait envoyer des boules d’énergie et dresser des boucliers. Un jeu grandeur nature, c’est ce qu’on appelle la réalité augmentée. « Il y a un viseur au milieu et on voit tout en 3D », décrit une gameuse.Derrière le masque, des éléments virtuels qui viennent s’ajouter à la réalité et des effets sonores plus vrais que nature. Un combat comme dans les mangas, beaucoup en rêvaient. « On voit tout ce qui se passe autour de nous : les adversaires, les boules de couleur qu’on lance », explique un participant. « C’est intéressant, ça change des jeux sur ordinateur, c’est un jeu un peu plus physique, on arrête pas de bouger », remarque un autre gameur.", isHTML: false)
         
         return mailComposerVC
     }
