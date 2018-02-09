@@ -14,6 +14,9 @@
 		84318AE1202C8447008EA518 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84318ADF202C8447008EA518 /* LaunchScreen.storyboard */; };
 		84318AEC202C8447008EA518 /* WORKSHOP2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84318AEB202C8447008EA518 /* WORKSHOP2Tests.swift */; };
 		84318AF7202C8447008EA518 /* WORKSHOP2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84318AF6202C8447008EA518 /* WORKSHOP2UITests.swift */; };
+		846963E4202DA3E300465E09 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846963E3202DA3E300465E09 /* HomePageController.swift */; };
+		846963E6202DA76700465E09 /* InscriptionForm6Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846963E5202DA76700465E09 /* InscriptionForm6Controller.swift */; };
+		846963EB202DAB5600465E09 /* icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846963EA202DAB5600465E09 /* icons.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		84318AF2202C8447008EA518 /* WORKSHOP2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WORKSHOP2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84318AF6202C8447008EA518 /* WORKSHOP2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WORKSHOP2UITests.swift; sourceTree = "<group>"; };
 		84318AF8202C8447008EA518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		846963E3202DA3E300465E09 /* HomePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
+		846963E5202DA76700465E09 /* InscriptionForm6Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InscriptionForm6Controller.swift; sourceTree = "<group>"; };
+		846963EA202DAB5600465E09 /* icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = icons.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				84318ADD202C8447008EA518 /* Assets.xcassets */,
 				84318ADF202C8447008EA518 /* LaunchScreen.storyboard */,
 				84318AE2202C8447008EA518 /* Info.plist */,
+				846963E3202DA3E300465E09 /* HomePageController.swift */,
+				846963E5202DA76700465E09 /* InscriptionForm6Controller.swift */,
+				846963EA202DAB5600465E09 /* icons.xcassets */,
 			);
 			path = WORKSHOP2;
 			sourceTree = "<group>";
@@ -234,6 +243,7 @@
 			files = (
 				84318AE1202C8447008EA518 /* LaunchScreen.storyboard in Resources */,
 				84318ADE202C8447008EA518 /* Assets.xcassets in Resources */,
+				846963EB202DAB5600465E09 /* icons.xcassets in Resources */,
 				84318ADC202C8447008EA518 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +271,8 @@
 			files = (
 				84318AD9202C8446008EA518 /* ViewController.swift in Sources */,
 				84318AD7202C8446008EA518 /* AppDelegate.swift in Sources */,
+				846963E6202DA76700465E09 /* InscriptionForm6Controller.swift in Sources */,
+				846963E4202DA3E300465E09 /* HomePageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
