@@ -35,9 +35,9 @@ class LoginController: UIViewController {
                         //self.present(HomePageController, animated: true, completion: nil)
                         if let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "home") {
                             self.navigationController?.pushViewController(nextViewController, animated: true)
-                    }
+                        }
                         
-                    }
+                    } 
                 } catch {
                     print(error)
                 }
